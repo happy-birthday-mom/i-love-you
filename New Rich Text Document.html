@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mom!</title>
+    <style>
+        body {
+            background-color: #b3e0ff; /* Light blue background */
+            color: #0077cc; /* Dark blue text */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .love {
+            font-weight: bold;
+            color: #00539b; /* Darker blue */
+        }
+        .dropdown-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            border: 2px solid #00539b; /* Darker blue border */
+            border-radius: 5px;
+            background-color: #f0f8ff; /* Light blue background */
+            min-width: 100%; /* Set minimum width */
+            animation: fadeIn 0.5s ease-in-out;
+            position: absolute;
+            z-index: 1;
+        }
+        .dropdown-content.active {
+            display: block;
+        }
+        button {
+            background-color: #0077cc; /* Dark blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #00539b; /* Darker blue on hover */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday Mom!</h1>
+    <p>If you're not my mom, get off this website.</p>
+    <p>I knew just the way to thank you instead of a plain old card because, let's be real, who wants JUST a card? I had to level it up this year because doing the same thing each year is kind of repetitive. I was like "I KNOW! How about an ENTIRE website?" I couldn't fit everything i wanted to say in a puny little card! I hope you have as much fun exploring this website as you do on your birthday. Just to get started, i'll name a few things that make you GREAT;</p>
+    <p>You're funny, You're fun, You're comforting,  You're cheerful, You're charismatic, and SOO much more.</p>
+    <p>Have fun mom. </p>
+    <p><span class="love">Love</span> Matthew</p>
+    
+    <div class="dropdown-container">
+        <!-- Button 1 -->
+        <div style="position:relative;">
+            <button onclick="toggleDropdown('dropdown1')">Things I Love About You</button>
+            <div id="dropdown1" class="dropdown-content">
+                <p>Here's a complete list of most (but not all) of the reasons i love you.</p>
+                <p>You always bring a smile to my face, you cheer me up when i'm sad, i always feel better when you're by my side, we have lots of fun together, you have a cheerful aura, you're charismatic, you're a go-getter, you like to get things done, you really care about me, dad, andrew, and everyone in general, you're persistent, you're always there to help people, you are a great baker, you're fun, etc.</p>
+                <p>Thank you for being here.</p>
+            </div>
+        </div>
+        
+        <!-- Button 2 -->
+        <div style="position:relative;">
+            <button onclick="toggleDropdown('dropdown2')">Memories We Share</button>
+            <div id="dropdown2" class="dropdown-content">
+                <p>Here are some of the best times that wouldnt've happened without you;</p>
+                <p>Turks and Caicos: BOY that was the best vacation ever. The food? Everything was free! I loved the freedom of being able to explore the different villages. Disney world: It's always SO magical when we're all there. It's just so fun, for NO reason at all! Tenesee: It was so relaxing in the mountain air up there at the cabin. Sitting in the hot tub, watching movies in the lounge, so awesome. Destin: The beach? Ohhh it was so nice. Oh and the hotel we both stayed at while andrew and dad were still at home? such a good time.</p>
+                <p>Thank you for all those times..</p>
+            </div>
+        </div>
+        
+        <!-- Button 3 -->
+        <div style="position:relative;">
+            <button onclick="toggleDropdown('dropdown3')">Poem for mom</button>
+            <div id="dropdown3" class="dropdown-content">
+                <p>Smiles, happiness, forgiveness, and fun, 
+when i'm feeling down, you're the one</p>
+                <p>You make me happy, even when the sun won't shine, if i ever get a chance to travel with you, i won't decline</p>
+                <p>I'm going to love you, from now until forever, but in the meantime, have the best birthday ever.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            dropdown.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
